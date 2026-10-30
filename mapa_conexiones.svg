@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="900" height="560" fill="#0d1117"/>
+  <text x="450" y="38" text-anchor="middle" fill="#f0f6fc" font-size="22" font-weight="bold">Mapa de conexiones - Monitor de pulso ESP32</text>
+  <text x="450" y="60" text-anchor="middle" fill="#8b949e" font-size="13">Todos los módulos a 3,3 V · ESP32 DevKit de 38 pines</text>
+
+  <!-- ESP32 -->
+  <rect x="340" y="90" width="220" height="420" rx="14" fill="#161b22" stroke="#58a6ff" stroke-width="2"/>
+  <text x="450" y="120" text-anchor="middle" fill="#58a6ff" font-size="18" font-weight="bold">ESP32</text>
+  <text x="450" y="140" text-anchor="middle" fill="#8b949e" font-size="12">DevKit</text>
+
+  <!-- Pines izquierda: sensor y buzzer -->
+  <g font-size="13" fill="#f0f6fc">
+    <text x="352" y="184">3V3</text>
+    <text x="352" y="234">GPIO 34 (ADC1)</text>
+    <text x="352" y="284">GPIO 25</text>
+    <text x="352" y="334">GND</text>
+  </g>
+  <!-- Pines derecha: pantalla -->
+  <g font-size="13" fill="#f0f6fc" text-anchor="end">
+    <text x="548" y="164">GPIO 23 (MOSI)</text>
+    <text x="548" y="204">GPIO 18 (SCK)</text>
+    <text x="548" y="244">GPIO 5 (CS)</text>
+    <text x="548" y="284">GPIO 2 (DC)</text>
+    <text x="548" y="324">GPIO 4 (RES)</text>
+    <text x="548" y="364">3V3</text>
+    <text x="548" y="404">GND</text>
+  </g>
+
+  <!-- Sensor -->
+  <rect x="40" y="150" width="190" height="130" rx="12" fill="#161b22" stroke="#3fb950" stroke-width="2"/>
+  <text x="135" y="178" text-anchor="middle" fill="#3fb950" font-size="16" font-weight="bold">Sensor de pulso</text>
+  <text x="135" y="206" text-anchor="middle" fill="#f0f6fc" font-size="13">+  (positivo)</text>
+  <text x="135" y="230" text-anchor="middle" fill="#f0f6fc" font-size="13">S  (señal)</text>
+  <text x="135" y="254" text-anchor="middle" fill="#f0f6fc" font-size="13">–  (negativo)</text>
+
+  <!-- Buzzer -->
+  <rect x="40" y="320" width="190" height="100" rx="12" fill="#161b22" stroke="#d29922" stroke-width="2"/>
+  <text x="135" y="348" text-anchor="middle" fill="#d29922" font-size="16" font-weight="bold">Buzzer activo</text>
+  <text x="135" y="376" text-anchor="middle" fill="#f0f6fc" font-size="13">+  (solo versión 2)</text>
+  <text x="135" y="398" text-anchor="middle" fill="#f0f6fc" font-size="13">–  (negativo)</text>
+
+  <!-- Pantalla -->
+  <rect x="670" y="130" width="190" height="300" rx="12" fill="#161b22" stroke="#f778ba" stroke-width="2"/>
+  <text x="765" y="158" text-anchor="middle" fill="#f778ba" font-size="16" font-weight="bold">TFT ST7789</text>
+  <text x="765" y="176" text-anchor="middle" fill="#8b949e" font-size="12">240 × 280 px</text>
+  <g font-size="13" fill="#f0f6fc" text-anchor="middle">
+    <text x="765" y="204">SDA / MOSI</text>
+    <text x="765" y="244">SCL / SCK</text>
+    <text x="765" y="284">CS</text>
+    <text x="765" y="324">DC</text>
+    <text x="765" y="364">RES</text>
+    <text x="765" y="394">VCC / BLK</text>
+    <text x="765" y="418">GND</text>
+  </g>
+
+  <!-- Cables sensor -->
+  <g fill="none" stroke-width="2.5">
+    <path d="M230 202 H300 V180 H340" stroke="#ff7b72"/>
+    <path d="M230 226 H340" stroke="#a5d6ff" transform="translate(0,4)"/>
+    <path d="M230 250 H290 V330 H340" stroke="#8b949e"/>
+    <!-- buzzer -->
+    <path d="M230 374 H310 V280 H340" stroke="#d29922"/>
+    <path d="M230 396 H290 V330" stroke="#8b949e"/>
+    <!-- TFT -->
+    <path d="M560 160 H610 V200 H670" stroke="#f778ba"/>
+    <path d="M560 200 H620 V240 H670" stroke="#f778ba"/>
+    <path d="M560 240 H630 V280 H670" stroke="#a5d6ff"/>
+    <path d="M560 280 H640 V320 H670" stroke="#a5d6ff"/>
+    <path d="M560 320 H650 V360 H670" stroke="#a5d6ff"/>
+    <path d="M560 360 H660 V390 H670" stroke="#ff7b72"/>
+    <path d="M560 400 H660 V414 H670" stroke="#8b949e"/>
+  </g>
+
+  <!-- Leyenda -->
+  <g font-size="12" fill="#c9d1d9">
+    <rect x="40" y="470" width="14" height="4" fill="#ff7b72"/><text x="62" y="476">Alimentación 3,3 V</text>
+    <rect x="200" y="470" width="14" height="4" fill="#8b949e"/><text x="222" y="476">GND común</text>
+    <rect x="320" y="470" width="14" height="4" fill="#a5d6ff"/><text x="342" y="476">Señal / control</text>
+    <rect x="460" y="470" width="14" height="4" fill="#f778ba"/><text x="482" y="476">Bus SPI</text>
+    <rect x="570" y="470" width="14" height="4" fill="#d29922"/><text x="592" y="476">Salida digital</text>
+  </g>
+  <text x="450" y="530" text-anchor="middle" fill="#8b949e" font-size="12">Confirme el pinout impreso en cada módulo antes de energizar el circuito.</text>
+</svg>
